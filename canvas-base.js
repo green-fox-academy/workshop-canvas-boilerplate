@@ -33,9 +33,10 @@ const config = {
   databaseURL: "https://pebble-wave.firebaseio.com",
   storageBucket: "",
 };
-firebase.initializeApp(config);
+firebase && firebase.initializeApp(config);
 
 canvas.onWave = function (callback) {
+  if (!firebase) return;
   let fbMoving = firebase.database().ref('moving');
   fbMoving.on('value', function(dataSnapshot) {
    let moving = dataSnapshot.val() === 'true';
