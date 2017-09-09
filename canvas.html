@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Greenfox Workshop</title>
+    <style>
+        body {
+            background: #333;
+        }
+        canvas {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<canvas width="700" height="400">
+<script>
+    // Codes are compatible with http://greenfox-academy.github.io/ examples
+    var canvas = document.querySelector('canvas');
+    var c = canvas.getContext('2d');
+    // Edit under this line
+
+    c.fillStyle = "limegreen";
+    c.beginPath();
+    c.moveTo(50, 100);
+    c.lineTo(70, 70);
+    c.lineTo(80, 90);
+    c.lineTo(90, 90);
+    c.lineTo(100, 70);
+    c.lineTo(120, 100);
+    c.lineTo(85, 130);
+    c.lineTo(50, 100);
+    c.fill();
+</script>
+</body>
+</html>
